@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="audio project.css">
+</head>
+<body>
+<div class="copy">
+	<div>
+		<ul class="list">
+	<li><a href="https://www.youtube.com/" target="_blank" class="bartag">EXIT</a></li>
+	<li ><a href="https://www.youtube.com/" target="_blank">PRODUCTS</a></li>
+	<li><a href="https://www.youtube.com/" target="_blank" class="bartag">ABOUT</a></li>
+	<li><a href="https://www.youtube.com/" target="_blank" class="bartag">HOME</a></li>
+</ul>
+	</div>
+	<div class="new">
+		<div class="left-col">
+			<h1>THE<br> REAL<br> SOUND</h1>
+		</div>
+			<div class="right-col">
+				<p>Click here to listen &nbsp; </p><br>
+				<img src="play.png" height="50px" width="50px" id="icon">
+		</div>
+</div>
+<audio id="audio">
+<source src="audio.mp4">
+</audio>
+<script>
+	//<img src="prev.jpg" height="600px" width="600px">
+var mysong=document.querySelector("#audio");
+var icon=document.querySelector("#icon");
+var song=true;
+var count=0;
+document.querySelector("mysong");
+icon.onclick=function(){
+	if(song==true){
+      mysong.play();
+		icon.src="pause.png"; 
+		song=false;
+	}
+	else{
+		 mysong.pause();
+        icon.src="play.png";
+        song=true;
+	}
+}
+function prev(){
+	count--;
+	if(count<0){
+		count=photoes.length-1;
+	}
+photo.src=photoes[count];
+}
+function next(){
+	count++;
+	if(count>=photoes.length){
+        count=0;
+	}
+	photo.src=photoes[count];
+}
+</script>
+</body>
+</html>
